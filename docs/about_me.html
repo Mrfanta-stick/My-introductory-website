@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styling_aboutme.css">
+</head>
+<body>
+    <header> 
+        <h1>Welcome to the About Me section</h1> 
+    </header>
+
+    <main>
+        <h2 style = "text-align: center;"> 
+            Perhaps you were expecting some flashy animations and lore about me but no lmao!
+            <br>
+            this page is dedicated to a simple yet fulfilling intro about my life.
+        </h2>
+        <dl style = "text-align: center;">
+            <dt>My name</dt>
+            <dd>H0ll0W (The honoured one)</dd>
+            <dt>Age</dt>
+            <dd>18 years and counting</dd>
+            <dt>Location</dt>
+            <dd>India (I'm in your walls)</dd>
+            <dt>Interests</dt>
+            <dd>
+                Coding, Gaming, Cooking, Fitness, Poetry, Art and Learning new things.
+                <br>
+                Literally anything attracts me if it's fun enough.
+            </dd>
+            <dt>Favorite Language</dt>
+            <dd>Python, C/C++, HTML, CSS, React and more (I'm also learning spanish btw :3)</dd>
+            <dt>Relationship status</dt>
+            <dd>Single asf</dd>
+            <dt>Favorite games</dt>
+            <dd>Genshin Impact, Chess, Minecraft, Roblox</dd>
+            <dt>Height</dt>
+            <dd>5'8 or 172cm</dd>
+            <dt>Extra</dt>
+            <dd>
+                I am a self-taught programmer and I love to learn new things every day.
+                <br>
+                I also enjoy cooking and trying out new recipes in my free time.
+                <br> 
+                And when I'm not coding or cooking, you can find me playing games or writing poerty or making digital art 
+                <br>
+                I'm a very shy and introverted person, but I love to make new friends and connect with people who share my interests.
+                <br>
+                I might be dry at first but I open up once I get to know you better and trust me you'll see a side of me so different.
+                <br>
+                I'm also dark skinned so don't bother if you're a racist or have any issues with that.
+            </dd>
+        </dl>
+    </main>
+    <footer>
+        <p>
+            Thank you for visiting my About Me page!
+            <br>
+            Feel free to reach out if you want to connect or have any questions.
+        </p>
+    </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dts = document.querySelectorAll("dt");
+
+  dts.forEach(dt => {
+    dt.addEventListener("click", () => {
+      const dd = dt.nextElementSibling;
+
+      // close all others (accordion behavior)
+      document.querySelectorAll("dd").forEach(el => {
+        if (el !== dd) el.classList.remove("active");
+      });
+
+      // toggle clicked one
+      dd.classList.toggle("active");
+    });
+  });
+});
+</script>
+
+</body>
+</html>
